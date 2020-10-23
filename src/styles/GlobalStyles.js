@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     --color-gray: #252627;
     --color-green: #67e813;
     --color-darkgreen: #1dbf5e;
+    --shadow: 0 4px 8px ${(props) =>
+      props.theme === 'dark' ? 'var(--color-green)' : 'var(--color-darkgreen)'};
     --main-bg-color: ${(props) =>
       props.theme === 'dark' ? '#1e1f20' : '#ffffff'};
     --main-fnt-color: ${(props) =>
@@ -69,9 +71,7 @@ export const CenterDiv = sytled.div`
 `;
 
 export const CardDiv = sytled.div`
-  background: var(--main-bg-color);
-  color: var(--main-fnt-color);
-  box-shadow: var(--color-green);
+  box-shadow: var(--shadow);
   border-radius: 8px;
   padding: 30px;
 `;
