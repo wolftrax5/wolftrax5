@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GlobalStyle, CardDiv } from './styles/GlobalStyles';
+import { useTheme } from './contexts/theme-context';
 
-const ThemeButton = ({ label, click }) => (
-  <button onClick={click}> Theme {label} </button>
-);
 const App = () => {
-  const [dark, setDatkmode] = useState(false);
-  const toggleTheme = () => setDatkmode(!dark);
+  let { theme, toggleTheme } = useTheme();
   return (
     <>
-      <GlobalStyle theme={dark ? 'dark' : 'ligth'} />
+      <GlobalStyle theme={theme} />
       <CardDiv>
         <h1>Create React App + Go API</h1>
       </CardDiv>
-      <ThemeButton label={dark ? 'dark' : 'ligth'} click={toggleTheme} />
+      <button onClick={toggleTheme}>Theme {theme}</button>
     </>
   );
 };
