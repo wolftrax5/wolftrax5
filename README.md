@@ -5,17 +5,17 @@ I am a developer who is passionate about stuff like deep learning and Web develo
 - 👨🏽‍💻 Currently working, learning and growing my skillset in JavaScript.
 - 🤖 Part of growing sckills are with DevOps, CD & CI.
 - 🤝 Open for collaborations in any opensoruce or web proyect.
-
+---
+[![Twitter: wolftrax05](https://img.shields.io/twitter/follow/wolftrax05?style=social)](https://twitter.com/wolftrax05)
+[![Linkedin: wolftrax](https://img.shields.io/badge/-wolftrax-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wolftrax/)](https://www.linkedin.com/in/wolftrax/)
+[![GitHub wolftrax5](https://img.shields.io/github/followers/wolftrax5?label=follow&style=social)](https://github.com/wolftrax5)
 ---
 <details open>
- <summary> 😇 <b>My Github Stats</b>: </summary>
+ <summary> 🤓 <b>My Github Stats</b>: </summary>
 <br>
 <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api?username=wolftrax5&show_icons=true&theme=chartreuse-dark&line_height=27&count_private=true">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=wolftrax5&hide=css,java,html&theme=chartreuse-dark&count_private=true">
 </p>
 </details>
-
-<details> 
- <summary>🤖 <b>My programming stats</b>: </summary>
 <br>
