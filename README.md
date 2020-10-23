@@ -1,21 +1,21 @@
-![React Logo](https://github.com/vercel/vercel/blob/master/packages/frameworks/logos/react.svg)
+<a href="https://twitter.com/wolftrax05" target="_blank" rel="nofollow"><img align="right" alt="Wolftrax's Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" /></a><a href="https://www.linkedin.com/in/wolftrax/" target="_blank" rel="nofollow"><img align="right" alt="Wolftrax's Linkdein" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
 
-# React Example
+## Hi 👋 I am Wolftrax! 
+I am a developer who is passionate about stuff like deep learning and Web development. Few tech that I enjoy working in are JavaScript, Docker, Css, and  AWS. I am actively looking for opportunities in Web development.
+- 👨🏽‍💻 Currently working, learning and growing my skillset in JavaScript.
+- 🤖 Part of growing sckills are with DevOps, CD & CI.
+- 🤝 Open for collaborations in any opensoruce or web proyect.
 
-This directory is a brief example of a [React](https://reactjs.org/) app with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) that can be deployed with Vercel and zero configuration.
+---
+<details open>
+ <summary> 😇 <b>My Github Stats</b>: </summary>
+<br>
+<p align = "center">
+  <img src = "https://github-readme-stats.vercel.app/api?username=wolftrax5&show_icons=true&theme=chartreuse-dark&line_height=27&count_private=true">
+  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=wolftrax5&hide=css,java,html&theme=chartreuse-dark&count_private=true">
+</p>
+</details>
 
-## Deploy Your Own
-
-Deploy your own React project, along with Serverless Functions, with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/master/examples/create-react-app-functions)
-
-_Live Example: https://create-react-app.now-examples.now.sh/_
-
-### How We Created This Example
-
-To get started with React, along with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction), with Vercel, you can use the [Create-React-App CLI](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) to initialize the project:
-
-```shell
-$ npx create-react-app my-app
-```
+<details> 
+ <summary>🤖 <b>My programming stats</b>: </summary>
+<br>
