@@ -46,8 +46,11 @@ export const GlobalStyle = createGlobalStyle`
       ul {
         list-style: none;
       }
+      body{
+        background: var(--main-bg-color);
+        color: var(--main-fnt-color);
+      }
       button {
-        background: transparent;
         border: 0;
         outline: 0;
         cursor: pointer;
