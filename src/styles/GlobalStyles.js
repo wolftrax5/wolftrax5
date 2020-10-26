@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     --main-fnt-color: ${(props) =>
       props.theme === 'dark' ? '#ffffff' : '#1e1f20'};
     --side-bar-width: 75px;
-    html {
+  }
+  html {
         box-sizing: border-box;
         font-family: 'Open Sans', sans-serif;
         color: var(--black);
@@ -63,8 +64,6 @@ export const GlobalStyle = createGlobalStyle`
       a {
         text-decoration: none;
       }
-    
-  }
 `;
 
 export const CenterDiv = sytled.div`

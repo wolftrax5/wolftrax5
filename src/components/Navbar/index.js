@@ -9,6 +9,7 @@ import {
   HomeIcon,
   ContactIcon,
   CodeIcon,
+  LogoIcon,
 } from '../Icon';
 
 export const Navbar = () => {
@@ -32,6 +33,7 @@ export const Navbar = () => {
           <ContactIcon />
         </NavLink>
       </NavSection>
+      <LogoIcon />
     </NavContainer>
   );
 };

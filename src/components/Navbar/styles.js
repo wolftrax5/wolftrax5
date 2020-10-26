@@ -16,14 +16,19 @@ export const NavContainer = styled.nav`
 
   @media (max-width: 950px) {
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 8fr;
+    grid-template-columns: 1fr 8fr 1fr;
+    padding: 0 5px;
   }
 `;
 export const NavSection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
   @media (max-width: 950px) {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 `;
