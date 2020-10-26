@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import sytled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -6,8 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     --color-gray: #252627;
     --color-green: #67e813;
     --color-darkgreen: #1dbf5e;
-    --shadow: 0 4px 8px ${(props) =>
+    --highligth: ${(props) =>
       props.theme === 'dark' ? 'var(--color-green)' : 'var(--color-darkgreen)'};
+    --shadow: 0 4px 8px var(--highligth);
     --main-bg-color: ${(props) =>
       props.theme === 'dark' ? '#1e1f20' : '#ffffff'};
     --main-fnt-color: ${(props) =>
@@ -61,7 +63,9 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
       }
     
-  }`;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+`;
 
 export const CenterDiv = sytled.div`
   display: flex;
