@@ -55,6 +55,7 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--main-fnt-color);
       }
       button {
+        background: transparent;
         border: 0;
         outline: 0;
         cursor: pointer;
@@ -64,7 +65,6 @@ export const GlobalStyle = createGlobalStyle`
       }
     
   }
-  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 `;
 
 export const CenterDiv = sytled.div`
