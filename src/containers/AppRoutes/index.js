@@ -1,39 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom';
-
-import { CenterDiv } from '../../styles/GlobalStyles';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Navbar } from '../../components/Navbar';
 import { MainLayout, WrapperContent, WrapperNav } from '../../styles/Layout';
-import { useTheme } from '../../contexts/theme-context';
 
-import {
-  ToxicIcon,
-  ProfileIcon,
-  HomeIcon,
-  ContactIcon,
-  CodeIcon,
-} from '../../components/Icon';
-
-const NavContainer = () => {
-  let { toggleTheme } = useTheme();
-  return (
-    <CenterDiv>
-      <Link to='/'>
-        <HomeIcon />
-      </Link>
-      <Link to='/profile'>
-        <ProfileIcon />
-      </Link>
-      <Link to='/codes'>
-        <CodeIcon />
-      </Link>
-      <Link to='/findme'>
-        <ContactIcon />
-      </Link>
-      <ToxicIcon onClick={toggleTheme} />
-    </CenterDiv>
-  );
-};
 const Home = () => (
   <AppContainer>
     <h1>Home</h1>
@@ -61,7 +31,7 @@ const AppContainer = ({ children }) => {
     <>
       <MainLayout>
         <WrapperNav>
-          <NavContainer />
+          <Navbar />
         </WrapperNav>
         <WrapperContent>{children}</WrapperContent>
       </MainLayout>

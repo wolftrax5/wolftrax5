@@ -24,6 +24,6 @@ export const WrapperContent = styled.section`
   grid-area: main;
   padding: 5px;
 `;
-export const WrapperNav = styled.nav`
+export const WrapperNav = styled.header`
   grid-area: nav;
 `;
