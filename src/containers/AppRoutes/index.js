@@ -1,46 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import { Navbar } from '../../components/Navbar';
-import { MainLayout, WrapperContent, WrapperNav } from '../../styles/Layout';
+import { AppLayout } from '../../components/AppLayout';
 
-const Home = () => (
-  <AppContainer>
-    <h1>Home</h1>
-  </AppContainer>
-);
+import { Home } from '../../pages/Home';
+
 const Profile = () => (
-  <AppContainer>
+  <AppLayout>
     <h1>Profile</h1>
-  </AppContainer>
+  </AppLayout>
 );
 const Codes = () => (
-  <AppContainer>
+  <AppLayout>
     <h1>Code</h1>
-  </AppContainer>
+  </AppLayout>
 );
 const Contact = () => (
-  <AppContainer>
+  <AppLayout>
     <h1>Contact</h1>
-  </AppContainer>
+  </AppLayout>
 );
 const Fory = () => <h1>404</h1>;
-
-const AppContainer = ({ children }) => {
-  return (
-    <>
-      <MainLayout>
-        <WrapperNav>
-          <Navbar />
-        </WrapperNav>
-        <WrapperContent>{children}</WrapperContent>
-      </MainLayout>
-    </>
-  );
-};
-AppContainer.propTypes = {
-  children: PropTypes.node,
-};
 
 export const AppRoutes = (props) => {
   return (
