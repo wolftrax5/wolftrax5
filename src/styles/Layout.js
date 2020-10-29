@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainLayout = styled.main`
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--default-font), sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;

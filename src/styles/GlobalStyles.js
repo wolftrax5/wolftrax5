@@ -15,10 +15,11 @@ export const GlobalStyle = createGlobalStyle`
     --main-fnt-color: ${(props) =>
       props.theme === 'dark' ? '#ffffff' : '#1e1f20'};
     --side-bar-width: 75px;
+    --default-font: 'Josefin Sans'
   }
   html {
         box-sizing: border-box;
-        font-family: 'Open Sans', sans-serif;
+        font-family: var(--default-font), sans-serif;
         color: var(--black);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
