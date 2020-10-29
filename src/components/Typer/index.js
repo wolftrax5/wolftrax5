@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
+import { TextContainer, Cursor } from './styles';
 
 const typeReducer = (state, action) => {
   switch (action.type) {
@@ -122,18 +123,23 @@ function useTypeTexts(words = ['hello', 'word'], typeDelay = 200) {
     }
   };
 
-  useEffect(canChaneWord, [typeDone]);
+  useEffect(canChaneWord, [typeDone, wordsState.endWords]);
 
   return { text };
 }
 
 export const TypingComponent = ({
   wordsToType = 'Hello wolftrax',
-  delay = 800,
+  delay = 1000,
 }) => {
   const { text } = useTypeTexts(['WORD', 'HELL'], delay);
 
-  return <span>{text}</span>;
+  return (
+    <TextContainer>
+      {text}
+      <Cursor>_</Cursor>
+    </TextContainer>
+  );
 };
 
 TypingComponent.propTypes = {
