@@ -7,8 +7,8 @@ const typeReducer = (state, action) => {
       if (state.currentIndex < state.currentTextToType.length) {
         return {
           ...state,
-          text: state.text + state.currentTextToType[state.currentIndex],
           currentIndex: state.currentIndex + 1,
+          text: state.text + state.currentTextToType[state.currentIndex],
         };
       }
       return {
@@ -75,7 +75,7 @@ function useTypeText(textToType = 'Hello useTypeText', delay = 200) {
     delay,
   ]);
 
-  return { text: chartsState.text, typeDone: chartsState.typeDone, updateWord };
+  return { text: chartsState.text, typeDone: chartsState.typeDone };
 }
 const wordReducer = (state, action) => {
   switch (action.type) {
@@ -89,6 +89,8 @@ const wordReducer = (state, action) => {
       }
       return {
         ...state,
+        currentIndex: 0,
+        currentWord: state.words[0],
         endWords: true,
       };
     case 'RESTART_WORD':
@@ -104,12 +106,7 @@ const wordReducer = (state, action) => {
       break;
   }
 };
-function useTypeTexts(
-  words = ['hello', 'word'],
-  waitDalay = 400,
-  typeDelay = 200,
-  loop = true
-) {
+function useTypeTexts(words = ['hello', 'word'], typeDelay = 200) {
   const [wordsState, dispatchWord] = useReducer(wordReducer, {
     words,
     currentIndex: 0,
@@ -117,45 +114,29 @@ function useTypeTexts(
     endWords: false,
   });
 
-  const { text, typeDone, updateWord } = useTypeText(
-    wordsState.currentWord,
-    typeDelay
-  );
+  const { text, typeDone } = useTypeText(wordsState.currentWord, typeDelay);
 
-  const typeNewWord = () => {
-    if (!wordsState.endWords) {
-      updateWord(wordsState.currentWord);
-    } else if (loop) {
-      dispatchWord({ type: 'RESTART_WORD' });
-    }
-  };
   const canChaneWord = () => {
-    if (typeDone) {
+    if (typeDone && !wordsState.endWords) {
       dispatchWord({ type: 'NEXT_WORD' });
     }
   };
 
-  useEffect(typeNewWord, [
-    wordsState.currentWord,
-    loop,
-    wordsState.endWords,
-    updateWord,
-  ]);
   useEffect(canChaneWord, [typeDone]);
 
   return { text };
 }
 
 export const TypingComponent = ({
-  textToType = 'Hello wolftrax',
-  delay = 200,
+  wordsToType = 'Hello wolftrax',
+  delay = 800,
 }) => {
-  const { text } = useTypeText('Hello');
+  const { text } = useTypeTexts(['WORD', 'HELL'], delay);
 
   return <span>{text}</span>;
 };
 
 TypingComponent.propTypes = {
   delay: PropTypes.number,
-  textToType: PropTypes.string,
+  wordsToType: PropTypes.arrayOf(PropTypes.string),
 };
