@@ -118,21 +118,21 @@ function useTypeTexts(words = ['hello', 'word'], typeDelay = 200) {
   const { text, typeDone } = useTypeText(wordsState.currentWord, typeDelay);
 
   const canChaneWord = () => {
-    if (typeDone && !wordsState.endWords) {
+    if (typeDone) {
       dispatchWord({ type: 'NEXT_WORD' });
     }
   };
 
-  useEffect(canChaneWord, [typeDone, wordsState.endWords]);
+  useEffect(canChaneWord, [typeDone]);
 
   return { text };
 }
 
 export const TypingComponent = ({
-  wordsToType = 'Hello wolftrax',
+  wordsToType = ['Hello', 'Typer'],
   delay = 1000,
 }) => {
-  const { text } = useTypeTexts(['WORD', 'HELL'], delay);
+  const { text } = useTypeTexts(wordsToType, delay);
 
   return (
     <TextContainer>

@@ -10,5 +10,5 @@ export const TextContainer = styled.span`
   text-align: center;
 `;
 export const Cursor = styled.span`
-  ${blink({ time: '1s' })}
+  ${blink({ time: '0.8s' })}
 `;
