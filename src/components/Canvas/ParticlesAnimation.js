@@ -27,6 +27,7 @@ class Particle {
     ctx.fill();
   }
   update(ctx) {
+    // make the trayectory until thouch the borders, then change direction
     if (this.x > ctx.canvas.width || this.x < this.size / 2) {
       this.directionX = -this.directionX;
     }
@@ -34,21 +35,18 @@ class Particle {
       this.directionY = -this.directionY;
     }
 
-    let dx = 500 - this.x;
-    let dy = 500 - this.y;
-    let distance = Math.sqrt(dx * dx + dy * dy);
-
     this.x += this.directionX;
     this.y += this.directionY;
     this.draw(ctx);
   }
 }
-const SerParticles = (n = 1) => {
+const SerParticles = (n = 1, s = 5) => {
   let particlearray = [];
   for (let index = 0; index < n; index++) {
-    let size = Math.random() * 5 + 1;
+    let size = Math.random() * s + 1;
     let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
     let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+    // velociti of particle
     let directionX = Math.random() * 2 - 1.5;
     let directionY = Math.random() * 2 - 1.5;
 
@@ -80,8 +78,8 @@ function conect(ctx, particlearray) {
 const RelativeCanvas = styled(Canvas)`
   position: absolute;
   top: 0;
-  width: 90%;
-  height: 90%;
+  width: 93%;
+  height: 93%;
 `;
 export const ParticlesAnimation = ({ number_particles = 2 }) => {
   // eslint-disable-next-line
@@ -106,4 +104,5 @@ export const ParticlesAnimation = ({ number_particles = 2 }) => {
 
 ParticlesAnimation.propTypes = {
   number_particles: PropTypes.number,
+  size_particles: PropTypes.oneOf[(4, 5, 6, 7, 8, 9, 10, 15)],
 };

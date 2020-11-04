@@ -18,4 +18,8 @@ export const HomeContainer = styled(MainContainer)``;
 
 export const SectionInfo = styled.section`
   place-self: center;
+  z-index: 100;
+  & h1 {
+    font-size: 78px;
+  }
 `;
