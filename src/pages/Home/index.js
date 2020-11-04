@@ -9,8 +9,14 @@ export const Home = () => {
     <AppLayout>
       <HomeContainer className={'home_container'}>
         <SectionInfo className={'home_main_info'}>
-          <h1>Home</h1>
-          <TypingComponent />
+          <h1>
+            HI, I am Alejandro <br />& <br /> I am{' '}
+            <TypingComponent
+              wordsToType={['DEVELOPER', 'FUNNY', 'FRIENDLY']}
+              delay={600}
+              size={72}
+            />
+          </h1>
         </SectionInfo>
         <section className='home_main_media'></section>
       </HomeContainer>

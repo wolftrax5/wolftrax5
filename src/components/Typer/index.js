@@ -131,13 +131,16 @@ function useTypeTexts(words = ['hello', 'word'], typeDelay = 200) {
 export const TypingComponent = ({
   wordsToType = ['Hello', 'Typer'],
   delay = 1000,
+  size,
 }) => {
   const { text } = useTypeTexts(wordsToType, delay);
 
   return (
-    <TextContainer>
+    <TextContainer size={size}>
+      {`{`}
       {text}
       <Cursor>_</Cursor>
+      {`}`}
     </TextContainer>
   );
 };
@@ -145,4 +148,5 @@ export const TypingComponent = ({
 TypingComponent.propTypes = {
   delay: PropTypes.number,
   wordsToType: PropTypes.arrayOf(PropTypes.string),
+  size: PropTypes.number,
 };

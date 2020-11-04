@@ -22,4 +22,9 @@ export const SectionInfo = styled.section`
   & h1 {
     font-size: 78px;
   }
+  @media (max-width: 950px) {
+    & h1 {
+      font-size: 18px;
+    }
+  }
 `;
