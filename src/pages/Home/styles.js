@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainContainer = styled.section`
+export const MainContainer = styled.main`
   font-size: 18px;
   display: grid;
   width: 100%;
@@ -15,3 +15,7 @@ export const MainContainer = styled.section`
 `;
 
 export const HomeContainer = styled(MainContainer)``;
+
+export const SectionInfo = styled.section`
+  place-self: center;
+`;
