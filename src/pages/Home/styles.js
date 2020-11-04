@@ -8,7 +8,7 @@ export const MainContainer = styled.main`
   grid-template-columns: 8fr 2fr;
 
   @media (max-width: 950px) {
-    grid-template-rows: 2fr 8fr;
+    grid-template-rows: 8fr 2fr;
     grid-template-columns: 1fr;
     font-size: 12px;
   }
@@ -24,7 +24,8 @@ export const SectionInfo = styled.section`
   }
   @media (max-width: 950px) {
     & h1 {
-      font-size: 18px;
+      text-align: center;
+      font-size: 58px;
     }
   }
 `;

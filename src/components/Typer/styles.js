@@ -8,7 +8,7 @@ export const TextContainer = styled.span`
   font-family: ${(props) => props.font};
   text-align: center;
   @media (max-width: 950px) {
-    font-size: 12px;
+    font-size: 22px;
   }
 `;
 export const Cursor = styled.span`

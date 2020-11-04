@@ -10,7 +10,7 @@ export const Home = () => {
       <HomeContainer className={'home_container'}>
         <SectionInfo className={'home_main_info'}>
           <h1>
-            HI, I am Alejandro <br />& <br /> I am{' '}
+            HI, I am Alejandro <br />& <br /> I am <br />
             <TypingComponent
               wordsToType={['DEVELOPER', 'FUNNY', 'FRIENDLY']}
               delay={600}
