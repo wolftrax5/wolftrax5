@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { AppLayout } from '../../components/AppLayout';
+import { ZeroLoad } from '../../components/ZeroLoad';
 
 import { Home } from '../../pages/Home';
 
@@ -19,7 +20,6 @@ const Contact = () => (
     <h1>Contact</h1>
   </AppLayout>
 );
-const Fory = () => <h1>404</h1>;
 
 export const AppRoutes = (props) => {
   return (
@@ -29,7 +29,7 @@ export const AppRoutes = (props) => {
         <Route path='/profile' exact component={Profile} />
         <Route path='/codes' exact component={Codes} />
         <Route path='/findme' exact component={Contact} />
-        <Route component={Fory} />
+        <Route path='*' component={ZeroLoad} />
       </Switch>
     </Router>
   );
