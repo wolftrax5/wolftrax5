@@ -1,5 +1,6 @@
 import React from 'react';
+import { Zero } from './styles';
 
 export const ZeroLoad = () => {
-  return <h1>404</h1>;
+  return <Zero></Zero>;
 };
