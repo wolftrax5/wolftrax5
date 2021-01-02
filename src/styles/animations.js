@@ -22,3 +22,16 @@ const blinkFrames = keyframes`
 export const blink = ({ time = '1s' }) => css`
   animation: ${blinkFrames} ${time} step-start 0s infinite;
 `;
+
+const partialSpinFrames = keyframes`
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+`;
+
+export const rotate = () => css`
+  animation: ${partialSpinFrames} 5s steps(4) infinite;
+`;
