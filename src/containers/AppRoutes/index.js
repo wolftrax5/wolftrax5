@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { AppLayout } from '../../components/AppLayout';
-import { ZeroLoad } from '../../components/ZeroLoad';
-
 import { Home } from '../../pages/Home';
+import { NotFound } from '../../pages/NotFound';
 
 const Profile = () => (
   <AppLayout>
@@ -29,7 +28,7 @@ export const AppRoutes = (props) => {
         <Route path='/profile' exact component={Profile} />
         <Route path='/codes' exact component={Codes} />
         <Route path='/findme' exact component={Contact} />
-        <Route path='*' component={ZeroLoad} />
+        <Route path='*' component={NotFound} />
       </Switch>
     </Router>
   );
