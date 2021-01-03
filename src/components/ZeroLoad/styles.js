@@ -32,10 +32,10 @@ export const Zero = styled.span`
     border-radius: 50%;
     background: linear-gradient(
       315deg,
-      var(--color-green),
-      var(--color-green) 49%,
-      var(--main-bg-color) 51%,
-      var(--main-bg-color)
+      var(--highligth),
+      var(--highligth) 49%,
+      var(--color-gray) 51%,
+      var(--color-gray)
     );
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 1);
     ${rotate()}
