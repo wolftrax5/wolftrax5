@@ -12,7 +12,13 @@ export const Home = () => {
           <h1>
             HI, I am Alejandro <br />& <br /> I am <br />
             <TypingComponent
-              wordsToType={['DEVELOPER', 'FUNNY', 'FRIENDLY', 'WOLFTRAX']}
+              wordsToType={[
+                'DEVELOPER',
+                'FUNNY',
+                'FRIENDLY',
+                'ATTENTIVE',
+                'WOLFTRAX',
+              ]}
               delay={600}
               size={72}
             />
