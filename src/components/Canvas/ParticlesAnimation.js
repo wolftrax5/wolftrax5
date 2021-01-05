@@ -40,7 +40,7 @@ class Particle {
     this.draw(ctx);
   }
 }
-const SerParticles = (n = 1, s = 5) => {
+const SetParticles = (n = 1, s = 5) => {
   let particlearray = [];
   for (let index = 0; index < n; index++) {
     let size = Math.random() * s + 1;
@@ -81,9 +81,12 @@ const RelativeCanvas = styled(Canvas)`
   width: 93%;
   height: 93%;
 `;
-export const ParticlesAnimation = ({ number_particles = 2 }) => {
+export const ParticlesAnimation = ({
+  number_particles = 2,
+  size_particles = 5,
+}) => {
   // eslint-disable-next-line
-  let particlearray = SerParticles(number_particles);
+  let particlearray = SetParticles(number_particles, size_particles);
 
   const draw = (ctx) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -104,5 +107,5 @@ export const ParticlesAnimation = ({ number_particles = 2 }) => {
 
 ParticlesAnimation.propTypes = {
   number_particles: PropTypes.number,
-  size_particles: PropTypes.oneOf[(4, 5, 6, 7, 8, 9, 10, 15)],
+  size_particles: PropTypes.oneOf([4, 5, 6, 7, 8, 9, 10, 15]),
 };
