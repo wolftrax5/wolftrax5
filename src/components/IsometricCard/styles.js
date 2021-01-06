@@ -5,6 +5,7 @@ export const Card = styled.div`
   width: 200px;
   height: 200px;
   transition: 0.5s;
+  border: 1px solid var(--transparent-color);
 
   &:hover {
     transform: translateY(-40px);
@@ -14,9 +15,13 @@ export const Card = styled.div`
     position: absolute;
     top: -15px;
     left: 0;
-    width: 100%;
+    width: 101%;
     height: 15px;
-    background: var(--highligth);
+    background: linear-gradient(
+      to top,
+      var(--transparent-color),
+      var(--highligth)
+    );
     transform-origin: bottom;
     transform: skewX(45deg);
     transition: 0.5s;
@@ -27,12 +32,15 @@ export const Card = styled.div`
     top: -15px;
     left: -15px;
     width: 15px;
-    height: 50%;
-    background: var(--highligth);
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      var(--transparent-color),
+      var(--highligth)
+    );
     transform-origin: left;
     transform: skewY(45deg);
     transition: 0.5s;
-    border-bottom: 200px solid #d9d9d9;
   }
 `;
 
@@ -55,18 +63,20 @@ export const CardImgBox = styled.div`
     background: linear-gradient(
       transparent,
       transparent,
-      rgba(250, 250, 250, 0.1)
+      var(--transparent-color)
     );
     transform-origin: bottom;
     transform: skewX(45deg);
     transition: 0.5s;
     pointer-events: none;
     z-index: -1;
+    filter: blur(4px);
+    opacity: 0.9px;
   }
 
   .card:hover &:before {
-    transform: skewX(45deg) translateY(40px);
-    filter: blur(5px);
+    transform: skewX(45deg) translateY(100px);
+    filter: blur(10px);
     opacity: 0.5px;
   }
 `;
