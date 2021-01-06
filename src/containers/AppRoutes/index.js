@@ -2,13 +2,9 @@ import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { AppLayout } from '../../components/AppLayout';
 import { Home } from '../../pages/Home';
+import { Profile } from '../../pages/Profile';
 import { NotFound } from '../../pages/NotFound';
 
-const Profile = () => (
-  <AppLayout>
-    <h1>Profile</h1>
-  </AppLayout>
-);
 const Codes = () => (
   <AppLayout>
     <h1>Code</h1>
