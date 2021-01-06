@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
       props.theme === 'dark' ? '#1e1f20' : '#ffffff'};
     --main-fnt-color: ${(props) =>
       props.theme === 'dark' ? '#ffffff' : '#1e1f20'};
+    --transparent-color: ${(props) =>
+      props.theme === 'dark'
+        ? 'rgba(250, 250, 250, 0.1)'
+        : 'rgba(0, 0, 0, 0.1)'};
     --side-bar-width: 75px;
     --default-font: 'Josefin Sans'
   }
