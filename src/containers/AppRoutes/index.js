@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { AppLayout } from '../../components/AppLayout';
 import { Home } from '../../pages/Home';
-import { Profile } from '../../pages/Profile';
+import { ContactPage } from '../../pages/Contact';
 import { NotFound } from '../../pages/NotFound';
 
 const Codes = () => (
@@ -10,9 +10,9 @@ const Codes = () => (
     <h1>Code</h1>
   </AppLayout>
 );
-const Contact = () => (
+const Profile = () => (
   <AppLayout>
-    <h1>Contact</h1>
+    <h1>Profile</h1>
   </AppLayout>
 );
 
@@ -23,7 +23,7 @@ export const AppRoutes = (props) => {
         <Route path='/' exact component={Home} />
         <Route path='/profile' exact component={Profile} />
         <Route path='/codes' exact component={Codes} />
-        <Route path='/findme' exact component={Contact} />
+        <Route path='/findme' exact component={ContactPage} />
         <Route path='*' component={NotFound} />
       </Switch>
     </Router>
