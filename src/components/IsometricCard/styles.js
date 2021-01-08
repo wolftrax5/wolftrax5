@@ -59,7 +59,7 @@ export const CardImgBox = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 150px;
     background: linear-gradient(
       transparent,
       transparent,
@@ -76,7 +76,7 @@ export const CardImgBox = styled.div`
 
   .card:hover &:before {
     transform: skewX(45deg) translateY(100px);
-    filter: blur(10px);
-    opacity: 0.5px;
+    filter: blur(20px);
+    opacity: 0.6px;
   }
 `;
