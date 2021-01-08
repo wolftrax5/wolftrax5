@@ -9,10 +9,10 @@ export const ContactPage = () => {
       <h1>Profile</h1>
       <p></p>
       <IsometricContainer>
-        <IsometricCard />
-        <IsometricCard />
-        <IsometricCard />
-        <IsometricCard />
+        <IsometricCard title='1' />
+        <IsometricCard title='2' />
+        <IsometricCard title='3' />
+        <IsometricCard title='4' />
       </IsometricContainer>
     </AppLayout>
   );
