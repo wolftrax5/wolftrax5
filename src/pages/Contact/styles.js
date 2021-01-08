@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const IsometricContainer = styled.div`
-  width: 80%;
+  width: 1050px;
   margin-left: 10%;
-  margin-top: 70px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -13,16 +13,22 @@ export const IsometricContainer = styled.div`
 
   transform: skewY(-10deg);
 
-  & div:nth-child(even) {
-    grid-column-start: 3;
-    grid-row-gap: 1;
+  & div:nth-child(1) {
+    grid-column: 1;
   }
-  & div:nth-child(3n + 1) {
-    grid-column-start: 2;
-    grid-row-gap: 2;
+  & div:nth-child(2) {
+    grid-column: 3;
   }
-  & div:nth-child(odd) {
-    grid-column-start: 1;
-    grid-row-gap: 1;
+  & div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  & div:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  & div:nth-child(5) {
+    grid-column: 4;
+    grid-row: 3;
   }
 `;

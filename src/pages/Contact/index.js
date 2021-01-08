@@ -13,6 +13,7 @@ export const ContactPage = () => {
         <IsometricCard title='2' />
         <IsometricCard title='3' />
         <IsometricCard title='4' />
+        <IsometricCard title='5' />
       </IsometricContainer>
     </AppLayout>
   );
