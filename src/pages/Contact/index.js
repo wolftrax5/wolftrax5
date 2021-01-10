@@ -2,12 +2,13 @@ import React from 'react';
 import { IsometricContainer } from './styles';
 import { AppLayout } from '../../components/AppLayout';
 import { IsometricCard } from '../../components/IsometricCard';
+
 import {
-  AiFillCodepenSquare,
+  AiFillFacebook,
   AiFillGithub,
   AiFillTwitterSquare,
   AiFillLinkedin,
-  AiFillGoogleSquare,
+  AiFillCalendar,
 } from 'react-icons/ai';
 
 export const ContactPage = () => {
@@ -16,25 +17,34 @@ export const ContactPage = () => {
       <h1>Profile</h1>
       <p></p>
       <IsometricContainer>
-        <IsometricCard>
-          <AiFillLinkedin />
-        </IsometricCard>
+        <a href='https://www.linkedin.com/in/wolftrax/' target='blank'>
+          <IsometricCard>
+            <AiFillLinkedin />
+          </IsometricCard>
+        </a>
+        <a href='https://twitter.com/wolftrax05' target='blank'>
+          <IsometricCard>
+            <AiFillTwitterSquare />
+          </IsometricCard>
+        </a>
 
-        <IsometricCard>
-          <AiFillTwitterSquare />
-        </IsometricCard>
+        <a href='https://github.com/wolftrax5' target='blank'>
+          <IsometricCard>
+            <AiFillGithub />
+          </IsometricCard>
+        </a>
 
-        <IsometricCard>
-          <AiFillGithub />
-        </IsometricCard>
+        <a href='https://www.facebook.com/RAM130/' target='blank'>
+          <IsometricCard>
+            <AiFillFacebook />
+          </IsometricCard>
+        </a>
 
-        <IsometricCard>
-          <AiFillCodepenSquare />
-        </IsometricCard>
-
-        <IsometricCard>
-          <AiFillGoogleSquare />
-        </IsometricCard>
+        <a href='https://calendly.com/wolftrax/15min' target='blank'>
+          <IsometricCard>
+            <AiFillCalendar />
+          </IsometricCard>
+        </a>
       </IsometricContainer>
     </AppLayout>
   );

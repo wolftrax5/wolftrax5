@@ -13,21 +13,21 @@ export const IsometricContainer = styled.div`
 
   transform: skewY(-10deg);
 
-  & div:nth-child(1) {
+  & a:nth-child(1) {
     grid-column: 1;
   }
-  & div:nth-child(2) {
+  & a:nth-child(2) {
     grid-column: 3;
   }
-  & div:nth-child(3) {
+  & a:nth-child(3) {
     grid-column: 2;
     grid-row: 2;
   }
-  & div:nth-child(4) {
+  & a:nth-child(4) {
     grid-column: 1;
     grid-row: 3;
   }
-  & div:nth-child(5) {
+  & a:nth-child(5) {
     grid-column: 4;
     grid-row: 3;
   }
