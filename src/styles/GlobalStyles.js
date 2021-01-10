@@ -69,6 +69,14 @@ export const GlobalStyle = createGlobalStyle`
       a {
         text-decoration: none;
       }
+      .icon-wolftrax {
+        & > path {
+          fill: var(--main-fnt-color);
+        }
+        &:hover > path {
+          fill: var(--highligth);
+        }
+      }
 `;
 
 export const CenterDiv = sytled.div`
