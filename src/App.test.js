@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+test('Verdadero', () => {
+  expect(true).toBeTruthy();
+});
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+const text = 'Hola Mundo';
+test('Debe contener Mundo', () => {
+  expect(text).toMatch(/Mundo/);
+});
+
+const fruits = ['fresa', 'mango', 'kiwi'];
+test('¿Tenemos mango?', () => {
+  expect(fruits).toContain('mango');
 });
