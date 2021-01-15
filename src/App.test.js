@@ -26,3 +26,36 @@ test('The callback should return a reversed word', () => {
     expect(str).toBe('iztalP');
   });
 });
+
+const reverseString2 = (str) => {
+  return new Promise((resove, reject) => {
+    if (!str) {
+      reject(Error('No string'));
+    }
+    resove(str.split('').reverse().join(''));
+  });
+};
+
+test('Test a promise', () => {
+  return reverseString2('Hola').then((str) => {
+    expect(str).toBe('aloH');
+  });
+});
+
+test('Test async/await', async () => {
+  const string = await reverseString2('Hola');
+  expect(string).toBe('aloH');
+});
+
+afterEach(() => {
+  console.log('After Each test');
+});
+afterAll(() => {
+  console.log('After ALL test');
+});
+beforeEach(() => {
+  console.log('Before each Test');
+});
+beforeAll(() => {
+  console.log('Before ALL Test');
+});
