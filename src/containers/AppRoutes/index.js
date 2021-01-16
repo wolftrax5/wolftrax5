@@ -1,16 +1,10 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import { AppLayout } from '../../components/AppLayout';
 import { Home } from '../../pages/Home';
 import { ContactPage } from '../../pages/Contact';
 import { NotFound } from '../../pages/NotFound';
 import { Profile } from '../../pages/Profile';
-
-const Codes = () => (
-  <AppLayout>
-    <h1>Code</h1>
-  </AppLayout>
-);
+import { Codes } from '../../pages/Codes';
 
 export const AppRoutes = (props) => {
   return (
