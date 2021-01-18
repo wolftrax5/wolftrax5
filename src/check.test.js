@@ -59,3 +59,32 @@ beforeEach(() => {
 beforeAll(() => {
   console.log('Before ALL Test');
 });
+
+const animals = [
+  '🐶',
+  '🐱',
+  '🐭',
+  '🐹',
+  '🐰',
+  '🐻',
+  '🐼',
+  '🐨',
+  '🐯',
+  '🦁',
+  '🐮',
+  '🐷',
+];
+
+const randomAnimal = () => {
+  const animal = animals[Math.floor(Math.random() * animals.length)];
+  return animal;
+};
+
+describe('Probar funcionalidades de randomAnimals', () => {
+  test('Probar la funcionalidad', () => {
+    expect(typeof randomAnimals()).toBe('string');
+  });
+  test('Probar que no existe un animal', () => {
+    expect(randomAnimals()).not.toMatch(/🦓/);
+  });
+});
