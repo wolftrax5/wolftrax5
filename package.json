@@ -15,6 +15,7 @@
     "dev": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "npm test -- --coverage",
     "pretty": "pretty-quick"
   },
   "browserslist": [
