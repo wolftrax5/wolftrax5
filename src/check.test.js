@@ -47,18 +47,18 @@ test('Test async/await', async () => {
   expect(string).toBe('aloH');
 });
 
-afterEach(() => {
-  console.log('After Each test');
-});
-afterAll(() => {
-  console.log('After ALL test');
-});
-beforeEach(() => {
-  console.log('Before each Test');
-});
-beforeAll(() => {
-  console.log('Before ALL Test');
-});
+// afterEach(() => {
+//   console.log('After Each test');
+// });
+// afterAll(() => {
+//   console.log('After ALL test');
+// });
+// beforeEach(() => {
+//   console.log('Before each Test');
+// });
+// beforeAll(() => {
+//   console.log('Before ALL Test');
+// });
 
 const animals = [
   '🐶',
@@ -82,9 +82,9 @@ const randomAnimal = () => {
 
 describe('Probar funcionalidades de randomAnimals', () => {
   test('Probar la funcionalidad', () => {
-    expect(typeof randomAnimals()).toBe('string');
+    expect(typeof randomAnimal()).toBe('string');
   });
   test('Probar que no existe un animal', () => {
-    expect(randomAnimals()).not.toMatch(/🦓/);
+    expect(randomAnimal()).not.toMatch(/🦓/);
   });
 });
