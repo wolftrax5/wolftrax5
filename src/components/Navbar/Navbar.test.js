@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import ThemeMock from '../../__moks__/ThemeMock';
 import { Navbar } from './index';
 
-describe('<Button />', () => {
+describe('<Navbar />', () => {
   const navbar = shallow(
     <ThemeMock>
       <Navbar />
