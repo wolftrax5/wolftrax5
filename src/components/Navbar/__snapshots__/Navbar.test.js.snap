@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavContainer snapshot Check UI of component NavContainer 1`] = `
+<nav
+  className="sc-gsTCUz fJqDzA"
+/>
+`;
