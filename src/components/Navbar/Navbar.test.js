@@ -5,7 +5,7 @@ import { create } from 'react-test-renderer';
 import ThemeMock from '../../__moks__/ThemeMock';
 import RouterMock from '../../__moks__/RouterMock';
 import { Navbar } from './index';
-import { NavContainer } from './styles';
+import { NavContainer, NavLink, NavSection } from './styles';
 
 describe('<Navbar />', () => {
   const navbar = shallow(
@@ -27,10 +27,24 @@ describe('NavContainer snapshot', () => {
     expect(navContainer).toMatchSnapshot();
   });
 
+  test('Check UI of component NavSections', () => {
+    const navSection = create(<NavSection />).toJSON();
+    expect(navSection).toMatchSnapshot();
+  });
+
   test('Check UI of Navbar', () => {
     const navbar = create(
       <RouterMock>
         <Navbar />
+      </RouterMock>
+    ).toJSON();
+    expect(navbar).toMatchSnapshot();
+  });
+
+  test('Check UI of NavLinks', () => {
+    const navbar = create(
+      <RouterMock>
+        <NavLink />
       </RouterMock>
     ).toJSON();
     expect(navbar).toMatchSnapshot();

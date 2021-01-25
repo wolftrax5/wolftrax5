@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`NavContainer snapshot Check UI of NavLinks 1`] = `
+<a
+  className="sc-bdfBwQ dlKDNg"
+  href=""
+  onClick={[Function]}
+/>
+`;
+
 exports[`NavContainer snapshot Check UI of Navbar 1`] = `
 <nav
   className="sc-gsTCUz fJqDzA navigation_content"
@@ -121,5 +129,11 @@ exports[`NavContainer snapshot Check UI of Navbar 1`] = `
 exports[`NavContainer snapshot Check UI of component NavContainer 1`] = `
 <nav
   className="sc-gsTCUz fJqDzA nav_container"
+/>
+`;
+
+exports[`NavContainer snapshot Check UI of component NavSections 1`] = `
+<section
+  className="sc-dlfnbm hQtyyd"
 />
 `;
