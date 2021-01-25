@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZeroLoad Snapshot Check UI of component Zero 1`] = `
+<span
+  className="sc-bdfBwQ ecsZWe"
+/>
+`;
+
+exports[`ZeroLoad Snapshot Check UI of component ZeroLoad 1`] = `
+<span
+  className="sc-bdfBwQ ecsZWe"
+/>
+`;
