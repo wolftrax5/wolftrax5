@@ -16,20 +16,20 @@ export const Navbar = () => {
   let { toggleTheme } = useTheme();
   return (
     <NavContainer className='navigation_content'>
-      <Button>
+      <Button aria-label='theme button'>
         <ToxicIcon onClick={toggleTheme} />
       </Button>
       <NavSection>
-        <NavLink to='/'>
+        <NavLink to='/' title='navegate to Home'>
           <HomeIcon />
         </NavLink>
-        <NavLink to='/profile'>
+        <NavLink to='/profile' title='navegate to Profile'>
           <ProfileIcon />
         </NavLink>
-        <NavLink to='/codes'>
+        <NavLink to='/codes' title='navegate to Proyects'>
           <CodeIcon />
         </NavLink>
-        <NavLink to='/findme'>
+        <NavLink to='/findme' title='navegate to contact wolftrax'>
           <ContactIcon />
         </NavLink>
       </NavSection>
