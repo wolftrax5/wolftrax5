@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Button } from '../../components/Button';
+import { Button } from '.';
 
 describe('<Button />', () => {
   const button = mount(<Button>My Button</Button>);
