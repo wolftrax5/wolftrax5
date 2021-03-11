@@ -6,14 +6,37 @@ import { NotFound } from '../../pages/NotFound';
 import { Profile } from '../../pages/Profile';
 import { Codes } from '../../pages/Codes';
 
+const routes = [
+  {
+    path: '/codes',
+    component: Codes,
+  },
+  {
+    path: '/findme',
+    component: ContactPage,
+  },
+  {
+    path: '/profile',
+    component: Profile,
+  },
+  {
+    path: '/',
+    component: Home,
+  },
+];
+
 export const AppRoutes = (props) => {
   return (
     <Router>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/profile' exact component={Profile} />
-        <Route path='/codes' exact component={Codes} />
-        <Route path='/findme' exact component={ContactPage} />
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            exact
+            component={route.component}
+          />
+        ))}
         <Route path='*' component={NotFound} />
       </Switch>
     </Router>
