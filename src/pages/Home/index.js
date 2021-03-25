@@ -18,6 +18,7 @@ export const Home = () => {
                 'FRIENDLY',
                 'ATTENTIVE',
                 'LEADER',
+                'CHEF',
                 'WOLFTRAX',
               ]}
               delay={600}
