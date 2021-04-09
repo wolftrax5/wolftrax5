@@ -28,7 +28,7 @@ export const Home = () => {
         </SectionInfo>
         <section className='home_main_media'></section>
       </HomeContainer>
-      <ParticlesAnimation number_particles={100} />
+      <ParticlesAnimation number_particles={200} />
     </AppLayout>
   );
 };
