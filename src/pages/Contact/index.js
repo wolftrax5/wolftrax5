@@ -14,7 +14,7 @@ import {
 export const ContactPage = () => {
   return (
     <AppLayout>
-       <h1>Work in Progress</h1>
+      <h1>Work in Progress</h1>
     </AppLayout>
   );
 };
