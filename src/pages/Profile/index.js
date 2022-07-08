@@ -4,7 +4,7 @@ import { AppLayout } from '../../components/AppLayout';
 export const Profile = () => {
   return (
     <AppLayout>
-      <h1>Profile</h1>
+      <h1>Work in Progress</h1>
     </AppLayout>
   );
 };
