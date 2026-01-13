@@ -13,12 +13,21 @@
       "jsx": true
     }
   },
-  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["react-hooks", "prettier"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
-    "react/prop-types": 1,
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
