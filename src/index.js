@@ -1,15 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import { ThemeProvider } from './contexts/theme-context';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+// Suppress MetaMask errors in console
+const originalError = console.error;
+console.error = (...args) => {
+  if (args[0] && typeof args[0] === 'string' && args[0].includes('MetaMask')) {
+    return; // Suppress MetaMask errors
+  }
+  originalError.apply(console, args);
+};
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <ThemeProvider>
     <App />
-  </ThemeProvider>,
-  document.getElementById('root')
+  </ThemeProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

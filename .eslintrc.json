@@ -7,13 +7,14 @@
     "es6": true
   },
   "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "extends": ["plugin:react/recommended", "plugin:prettier/recommended", "prettier/react"],
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
   "plugins": ["react-hooks", "prettier"],
-  // add your custom rules here
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react/prop-types": 1,

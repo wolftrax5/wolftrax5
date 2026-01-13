@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from '../../pages/Home';
 import { ContactPage } from '../../pages/Contact';
 import { NotFound } from '../../pages/NotFound';
@@ -9,36 +9,31 @@ import { Codes } from '../../pages/Codes';
 const routes = [
   {
     path: '/codes',
-    component: Codes,
+    element: <Codes />,
   },
   {
     path: '/findme',
-    component: ContactPage,
+    element: <ContactPage />,
   },
   {
     path: '/profile',
-    component: Profile,
+    element: <Profile />,
   },
   {
     path: '/',
-    component: Home,
+    element: <Home />,
   },
 ];
 
 export const AppRoutes = (props) => {
   return (
     <Router>
-      <Switch>
+      <Routes>
         {routes.map((route) => (
-          <Route
-            key={route.path}
-            path={route.path}
-            exact
-            component={route.component}
-          />
+          <Route key={route.path} path={route.path} element={route.element} />
         ))}
-        <Route path='*' component={NotFound} />
-      </Switch>
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </Router>
   );
 };
