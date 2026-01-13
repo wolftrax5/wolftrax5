@@ -3,11 +3,6 @@
   "outputDirectory": "build",
   "devCommand": "npm run dev",
   "installCommand": "npm install --legacy-peer-deps",
-  "framework": "create-react-app",
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs22.x"
-    }
-  }
+  "framework": "create-react-app"
 }
 
