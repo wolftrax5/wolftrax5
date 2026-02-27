@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
                 'PASSIONATE',
                 'WOLFTRAX',
               ]}
-              delay={600}
+              delay={90}
               size={72}
             />
           </h1>

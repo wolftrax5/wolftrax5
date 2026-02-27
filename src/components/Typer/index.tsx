@@ -1,162 +1,7 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { TextContainer, Cursor } from './styles';
 
-interface TypeState {
-  text: string;
-  currentTextToType: string;
-  currentIndex: number;
-  typingEnd: boolean;
-  typeDone: boolean;
-}
-
-type TypeAction =
-  | { type: 'TYPE' }
-  | { type: 'DELETE' }
-  | { type: 'RESTART'; payload: { word: string } };
-
-const typeReducer = (state: TypeState, action: TypeAction): TypeState => {
-  switch (action.type) {
-    case 'TYPE':
-      if (state.currentIndex < state.currentTextToType.length) {
-        return {
-          ...state,
-          currentIndex: state.currentIndex + 1,
-          text: state.text + state.currentTextToType[state.currentIndex],
-        };
-      }
-      return {
-        ...state,
-        typingEnd: true,
-      };
-    case 'DELETE':
-      if (state.currentIndex > 0) {
-        return {
-          ...state,
-          text: state.text.substr(0, state.currentIndex - 1),
-          currentIndex: state.currentIndex - 1,
-        };
-      }
-      return {
-        ...state,
-        typeDone: true,
-        typingEnd: false,
-      };
-    case 'RESTART':
-      return {
-        text: '',
-        currentTextToType: action.payload.word,
-        currentIndex: 0,
-        typingEnd: false,
-        typeDone: false,
-      };
-    default:
-      throw new Error('No Action');
-  }
-};
-
-function useTypeText(
-  textToType: string = 'Hello useTypeText',
-  delay: number = 200
-) {
-  const [chartsState, dispatchChart] = useReducer(typeReducer, {
-    text: '',
-    currentTextToType: textToType,
-    currentIndex: 0,
-    typingEnd: false,
-    typeDone: false,
-  });
-
-  const updateWord = (word: string) =>
-    dispatchChart({ type: 'RESTART', payload: { word } });
-
-  const typeText = () => {
-    dispatchChart({ type: 'TYPE' });
-  };
-
-  const deleteType = () => {
-    dispatchChart({ type: 'DELETE' });
-  };
-
-  useEffect(() => {
-    // at new word to type reset all
-    updateWord(textToType);
-  }, [textToType]);
-
-  // typing for current word, if the word is end start deleting
-  const doType = () => {
-    setTimeout(!chartsState.typingEnd ? typeText : deleteType, delay);
-  };
-
-  useEffect(doType, [
-    chartsState.currentIndex,
-    chartsState.typingEnd,
-    chartsState.typeDone,
-    delay,
-  ]);
-
-  return { text: chartsState.text, typeDone: chartsState.typeDone };
-}
-
-interface WordState {
-  words: string[];
-  currentIndex: number;
-  currentWord: string;
-  endWords: boolean;
-}
-
-type WordAction = { type: 'NEXT_WORD' } | { type: 'RESTART_WORD' };
-
-const wordReducer = (state: WordState, action: WordAction): WordState => {
-  switch (action.type) {
-    case 'NEXT_WORD':
-      if (state.currentIndex < state.words.length - 1) {
-        return {
-          ...state,
-          currentIndex: state.currentIndex + 1,
-          currentWord: state.words[state.currentIndex + 1],
-        };
-      }
-      return {
-        ...state,
-        currentIndex: 0,
-        currentWord: state.words[0],
-        endWords: true,
-      };
-    case 'RESTART_WORD':
-      return {
-        ...state,
-        currentIndex: 0,
-        currentWord: state.words[0],
-        endWords: false,
-      };
-    default:
-      throw new Error('No Action');
-  }
-};
-
-function useTypeTexts(
-  words: string[] = ['hello', 'word'],
-  typeDelay: number = 200
-) {
-  const [wordsState, dispatchWord] = useReducer(wordReducer, {
-    words,
-    currentIndex: 0,
-    currentWord: words[0],
-    endWords: false,
-  });
-
-  const { text, typeDone } = useTypeText(wordsState.currentWord, typeDelay);
-
-  const canChaneWord = () => {
-    if (typeDone) {
-      dispatchWord({ type: 'NEXT_WORD' });
-    }
-  };
-
-  useEffect(canChaneWord, [typeDone]);
-
-  return { text };
-}
+type Phase = 'typing' | 'holding' | 'deleting';
 
 interface TypingComponentProps {
   wordsToType?: string[];
@@ -166,15 +11,63 @@ interface TypingComponentProps {
 
 export const TypingComponent: React.FC<TypingComponentProps> = ({
   wordsToType = ['Hello', 'Typer'],
-  delay = 1000,
+  delay = 90,
   size,
 }) => {
-  const { text } = useTypeTexts(wordsToType, delay);
+  const [displayText, setDisplayText] = useState('');
+  const [phase, setPhase] = useState<Phase>('typing');
+  const [wordIndex, setWordIndex] = useState(0);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const wordsRef = useRef(wordsToType);
+
+  const currentWord = wordsRef.current[wordIndex];
+
+  // Natural human-like variation: ±30% per keystroke
+  const jitter = (ms: number) => ms * (0.7 + Math.random() * 0.6);
+
+  useEffect(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    if (phase === 'typing') {
+      if (displayText.length < currentWord.length) {
+        // Type one character at a time with slight speed variation
+        timeoutRef.current = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length + 1));
+        }, jitter(delay));
+      } else {
+        // Word is fully typed — hold so the user can read it
+        timeoutRef.current = setTimeout(() => setPhase('holding'), 1500);
+      }
+    } else if (phase === 'holding') {
+      // Brief extra beat before erasing begins
+      timeoutRef.current = setTimeout(() => setPhase('deleting'), 300);
+    } else {
+      if (displayText.length > 0) {
+        // Delete faster than typing — feels intentional, not sluggish
+        timeoutRef.current = setTimeout(
+          () => {
+            setDisplayText((prev) => prev.slice(0, -1));
+          },
+          jitter(delay * 0.4)
+        );
+      } else {
+        // All erased — short pause then move to next word
+        timeoutRef.current = setTimeout(() => {
+          setWordIndex((i) => (i + 1) % wordsRef.current.length);
+          setPhase('typing');
+        }, 400);
+      }
+    }
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [displayText, phase, wordIndex, delay, currentWord]);
 
   return (
     <TextContainer size={size}>
       {`{`}
-      {text}
+      {displayText}
       <Cursor>_</Cursor>
       {`}`}
     </TextContainer>
