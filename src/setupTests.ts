@@ -4,9 +4,10 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Enzyme setup
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
-
+try {
+  const { configure } = require('enzyme');
+  const Adapter = require('enzyme-adapter-react-16');
+  configure({ adapter: new Adapter() });
+} catch {
+  // Enzyme pulls undici APIs that this Jest/jsdom environment does not provide.
+}
