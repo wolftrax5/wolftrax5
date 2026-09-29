@@ -1,20 +1,64 @@
-## Hi ✋ I am Wolftrax From 🇲🇽 !
-I am a developer who is passionate about stuff like deep learning and Web development. Technologies that I enjoy working in are JavaScript, Docker, CSS, and  AWS. I am actively looking for opportunities in Web development.
-- 👨🏽‍💻 Currently working, learning and growing my skillset in JavaScript.
-- 🤖 Part of growing skills are with DevOps, CD & CI.
-- 🤝 Open for collaborations in any open soruce or web proyect.
-- 🌐 Visit my [porfolio website](https://wolftrax5.vercel.app/) (*working on it*)
----
-![Twitter Follow](https://img.shields.io/twitter/follow/wolftrax05?label=wolftrax&style=social)
-[![Linkedin: wolftrax](https://img.shields.io/badge/-wolftrax-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wolftrax/)](https://www.linkedin.com/in/wolftrax/)
-[![GitHub wolftrax5](https://img.shields.io/github/followers/wolftrax5?label=follow&style=social)](https://github.com/wolftrax5)
----
-<details open>
- <summary> 🤓 <b>My Github Stats</b>: </summary>
+<div align="center">
+
+<a href="https://wolftrax5.vercel.app">
+  <img src="https://readme-typing-svg.demolab.com?font=Josefin+Sans&weight=600&size=28&duration=2600&pause=900&color=67E813&center=true&vCenter=true&width=880&lines=Hi%2C+I'm+Alejandro+%2F+Wolftrax;Full+Stack+Developer;Web+App+builder+%C2%B7+scalable+software;Building+from+Aguascalientes%2C+M%C3%A9xico+%F0%9F%87%B2%F0%9F%87%BD" alt="typing banner">
+</a>
+
 <br>
-<p align = "center">
-  <img src = "https://github-readme-stats.vercel.app/api?username=wolftrax5&show_icons=true&theme=chartreuse-dark&line_height=27&count_private=true">
-  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=wolftrax5&hide=css,java,html&theme=chartreuse-dark&count_private=true">
-</p>
-</details>
+
+<a href="https://www.linkedin.com/in/wolftrax/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>&nbsp;&nbsp;
+<a href="https://x.com/wolftrax05"><img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=67e813" alt="X"></a>&nbsp;&nbsp;
+<a href="https://github.com/wolftrax5"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=67e813" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://wolftrax5.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=67e813" alt="Portfolio"></a>
+
 <br>
+
+<img src="https://komarev.com/ghpvc/?username=wolftrax5&style=flat&color=67e813&label=profile+views" alt="profile views">
+
+</div>
+
+---
+
+## This is me :)
+
+Hi, I'm **Alejandro** (aka **Wolftrax**), full stack developer broadcasting from Aguascalientes, México 🇲🇽.
+I build web experiences with a strong emphasis on frontend craft, motion, and clean architecture — while staying comfortable across the stack.
+
+- 💻 **Full Stack Developer**: Web App builder specializing in scalable software solutions.
+- ⚛️ Passionate about **React**, **Next.js**, **TypeScript**, and modern frontend craft.
+- 🦀 Currently learning **Rust** and expanding into systems-level thinking.
+- 🤖 Growing my skillset in **DevOps**, CI/CD, and shipping with confidence.
+- 🤝 Open for collaborations on open source and web projects.
+- 🌐 Visit my [portfolio](https://wolftrax5.vercel.app) to see what I'm building.
+- 💬 Talk to me about **web development**, **frontend craft**, or **building in LATAM** and you'll have my full attention.
+
+<br>
+
+<div align="center">
+
+## my perfect stack\`
+
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,vue,nodejs,rust,css,docker,aws,git,github,vercel,vscode&perline=7" alt="tech stack">
+
+</div>
+
+---
+
+<div align="center">
+
+## currently shipping
+
+<br>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=wolftrax5&theme=github_dark" alt="repos per language" height="200">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=wolftrax5&theme=github_dark" alt="most commit language" height="200">
+
+</div>
+
+---
+
+<div align="center">
+
+<sub>` Build with love · @wolftrax5 `</sub>
+
+</div>
