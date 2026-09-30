@@ -4,6 +4,15 @@ export type Project = ProjectCardProps & { id: string };
 
 export const PROJECTS: Project[] = [
   {
+    id: 'arcade-ui',
+    title: 'Arcade UI',
+    description:
+      '16-bit retro React component library with cabinet controls — ArcadeButton, PixelInput, RetroBadge, and InventoryChip. Built with CSS Modules and Storybook.',
+    tags: ['React', 'TypeScript', 'Storybook', 'CSS Modules'],
+    repoUrl: 'https://github.com/wolftrax5/arcade-ui',
+    liveUrl: 'https://rt.wolftrax.me',
+  },
+  {
     id: 'og-3d-generator',
     title: 'OG 3D Generator',
     description:
