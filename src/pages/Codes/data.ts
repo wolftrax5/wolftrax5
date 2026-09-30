@@ -11,6 +11,9 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'TypeScript', 'Storybook', 'CSS Modules'],
     repoUrl: 'https://github.com/wolftrax5/arcade-ui',
     liveUrl: 'https://rt.wolftrax.me',
+    previewAlt: 'Arcade UI',
+    previewSrc:
+      'https://og.wolftrax.me/api/og-3d?shape=cone&color=f43f5e&light=0.6&metalness=0.85&width=800&height=500&bg=1e1f20',
   },
   {
     id: 'og-3d-generator',
