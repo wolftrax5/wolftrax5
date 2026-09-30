@@ -4,6 +4,7 @@ import { fadeIn } from '../../styles/animations';
 export const Card = styled.article`
   display: flex;
   flex-direction: column;
+  width: 100%;
   border-radius: 14px;
   background: var(--transparent-color);
   backdrop-filter: blur(14px);
@@ -23,6 +24,13 @@ export const Card = styled.article`
     transform: translateY(-6px);
     border-color: var(--highligth);
   }
+
+  @media (max-width: 950px) {
+    &:hover,
+    &:focus-within {
+      transform: none;
+    }
+  }
 `;
 
 export const Preview = styled.div`
@@ -31,6 +39,10 @@ export const Preview = styled.div`
   aspect-ratio: 16 / 10;
   background: var(--color-darkgray);
   overflow: hidden;
+
+  @media (max-width: 950px) {
+    aspect-ratio: 16 / 9;
+  }
 `;
 
 export const PreviewImage = styled.img`
@@ -54,6 +66,11 @@ export const Body = styled.div`
   gap: 12px;
   padding: 20px 22px 22px;
   flex: 1;
+
+  @media (max-width: 950px) {
+    padding: 16px 16px 18px;
+    gap: 10px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -61,6 +78,10 @@ export const Title = styled.h2`
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.01em;
+
+  @media (max-width: 950px) {
+    font-size: 20px;
+  }
 `;
 
 export const Description = styled.p`
@@ -69,6 +90,11 @@ export const Description = styled.p`
   line-height: 1.55;
   opacity: 0.9;
   flex: 1;
+
+  @media (max-width: 950px) {
+    font-size: 13px;
+    line-height: 1.5;
+  }
 `;
 
 export const Tags = styled.ul`
@@ -94,6 +120,11 @@ export const Actions = styled.nav`
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 8px;
+
+  @media (max-width: 950px) {
+    gap: 8px;
+    margin-top: 4px;
+  }
 `;
 
 export const ActionLink = styled.a`
@@ -123,5 +154,10 @@ export const ActionLink = styled.a`
   &:focus-visible {
     outline: 2px solid var(--highligth);
     outline-offset: 2px;
+  }
+
+  @media (max-width: 950px) {
+    min-height: 40px;
+    padding: 10px 16px;
   }
 `;

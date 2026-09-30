@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
         color: var(--black);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        height: 100%;
+        overflow: hidden;
     
       }
       *, *::before, *::after {
@@ -62,6 +64,11 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
       body{
         background: var(--main-bg-color);
         color: var(--main-fnt-color);
+        height: 100%;
+        overflow: hidden;
+      }
+      #root {
+        height: 100%;
       }
       button {
         background: transparent;

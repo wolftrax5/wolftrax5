@@ -19,6 +19,7 @@ export const NavContainer = styled.nav`
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 8fr 1fr;
     padding: 0 5px;
+    border-top: 1px solid var(--transparent-color);
   }
 `;
 

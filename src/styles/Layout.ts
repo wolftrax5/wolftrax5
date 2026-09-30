@@ -5,6 +5,10 @@ export const MainLayout = styled.main`
   margin: 0;
   padding: 0;
   height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
   background-color: var(--main-bg-color);
   color: var(--main-fnt-color);
   display: grid;
@@ -13,7 +17,7 @@ export const MainLayout = styled.main`
 
   @media (max-width: 950px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr var(--side-bar-width);
+    grid-template-rows: minmax(0, 1fr) var(--side-bar-width);
     grid-template-areas:
       'main'
       'nav';
@@ -23,8 +27,15 @@ export const MainLayout = styled.main`
 export const WrapperContent = styled.section`
   grid-area: main;
   padding: 5px;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const WrapperNav = styled.header`
   grid-area: nav;
+  z-index: 20;
+  background-color: var(--main-bg-color);
 `;

@@ -15,7 +15,7 @@ export const ProfileContainer = styled.section`
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 10px);
+  min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
